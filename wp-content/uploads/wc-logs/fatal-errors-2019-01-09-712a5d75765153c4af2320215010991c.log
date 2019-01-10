@@ -1,0 +1,12 @@
+2019-01-09T14:06:33+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\wordpress\wp-includes\widgets\class-wp-widget-tag-cloud.php on line 17
+
+2019-01-09T14:06:38+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\wordpress\wp-content\plugins\autoptimize\classes\autoptimizeExtra.php on line 6
+
+2019-01-09T14:07:19+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\wordpress\wp-includes\wp-db.php on line 1924
+
+2019-01-09T14:07:22+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\wordpress\wp-content\themes\oceanwp\partials\scroll-top.php on line 9
+
+2019-01-09T23:04:04+00:00 CRITICAL Maximum execution time of 30 seconds exceeded, em C:\xampp\htdocs\wordpress\wp-content\plugins\autoptimize\classes\autoptimizeExtra.php, na linha 6
+
+2019-01-09T23:04:47+00:00 CRITICAL Maximum execution time of 30 seconds exceeded, em C:\xampp\htdocs\wordpress\wp-admin\includes\update.php, na linha 14
+
