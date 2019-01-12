@@ -3,7 +3,7 @@
  * Plugin Name:			Ocean Extra
  * Plugin URI:			https://oceanwp.org/extension/ocean-extra/
  * Description:			Add extra features like widgets, metaboxes, import/export and a panel to activate the premium extensions.
- * Version:				1.4.30
+ * Version:				1.5.0
  * Author:				OceanWP
  * Author URI:			https://oceanwp.org/
  * Requires at least:	4.5.0
@@ -86,18 +86,13 @@ final class Ocean_Extra {
 		$this->token 			= 'ocean-extra';
 		$this->plugin_url 		= plugin_dir_url( __FILE__ );
 		$this->plugin_path 		= plugin_dir_path( __FILE__ );
-		$this->version 			= '1.4.30';
+		$this->version 			= '1.5.0';
 
 		define( 'OE_URL', $this->plugin_url );
 		define( 'OE_PATH', $this->plugin_path );
 		define( 'OE_VERSION', $this->version );
+        define( 'OE_FILE_PATH', __FILE__ );
 		define( 'OE_ADMIN_PANEL_HOOK_PREFIX', 'theme-panel_page_oceanwp-panel' );
-
-		// Elementor partner ID
-		if ( class_exists( 'Elementor\Plugin' )
-			&& ! defined( 'ELEMENTOR_PARTNER_ID' ) ) {
-			define( 'ELEMENTOR_PARTNER_ID', 2121 );
-		}
 
 		// WPForms partner ID
 		add_filter( 'wpforms_upgrade_link', array( $this, 'wpforms_upgrade_link' ) );
@@ -127,7 +122,8 @@ final class Ocean_Extra {
 			require_once( OE_PATH .'/includes/panel/library-shortcode.php' );
 			require_once( OE_PATH .'/includes/panel/updater.php' );
 			require_once( OE_PATH .'/includes/menu-icons/menu-icons.php' );
-
+			require_once( OE_PATH .'/includes/wizard/wizard.php' );
+	        
 			// Outputs custom JS to the footer
 			add_action( 'wp_footer', array( $this, 'custom_js' ), 9999 );
 
@@ -345,12 +341,7 @@ final class Ocean_Extra {
 			require_once( OE_PATH .'/includes/panel/notice.php' );
 			require_once( OE_PATH .'/includes/walker.php' );
 			require_once( OE_PATH .'/includes/dashboard.php' );
-
-			// If Demo Import or Pro Demos is activated
-			if ( class_exists( 'Ocean_Demo_Import' )
-				|| class_exists( 'Ocean_Pro_Demos' ) ) {
-				require_once( OE_PATH .'/includes/panel/demos.php' );
-			}
+			require_once( OE_PATH .'/includes/panel/demos.php' );
 			
 			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 999 );
 		}

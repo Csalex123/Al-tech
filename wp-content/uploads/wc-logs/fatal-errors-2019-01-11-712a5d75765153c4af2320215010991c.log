@@ -8,3 +8,7 @@ Stack trace:
 #5 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(286): OceanWP_WooCommerce_Config->floating_bar('')
 #6 C:\xam, em C:\xampp\htdocs\wordpress\wp-content\plugins\wc-custom-add-to-cart-labels\wc-custom-add-to-cart-labels.php, na linha 154
 
+2019-01-11T23:57:40+00:00 CRITICAL Maximum execution time of 30 seconds exceeded, em C:\xampp\htdocs\wordpress\wp-content\plugins\contact-form-7\modules\date.php, na linha 9
+
+2019-01-11T23:58:24+00:00 CRITICAL Maximum execution time of 30 seconds exceeded, em C:\xampp\htdocs\wordpress\wp-content\themes\oceanwp\woocommerce\loop\loop-start.php, na linha 11
+
